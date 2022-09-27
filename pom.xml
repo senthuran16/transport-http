@@ -222,6 +222,12 @@
                 <artifactId>netty-tcnative-boringssl-static</artifactId>
                 <version>${netty-tcnative-boringssl-static.version}</version>
             </dependency>
+            <!-- Java11 dependencies -->
+            <dependency>
+                <groupId>javax.xml.bind</groupId>
+                <artifactId>jaxb-api</artifactId>
+                <version>2.3.1</version> <!-- TODO property -->
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

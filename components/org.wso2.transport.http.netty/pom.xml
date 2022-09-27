@@ -138,6 +138,12 @@
             <artifactId>unirest-java</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- Java11 dependencies -->
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.3.1</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -147,7 +153,8 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.2</version>
                 <configuration>
-                    <argLine>@{argLine} -Dfile.encoding=UTF-8</argLine>
+<!--                    <argLine>@{argLine} -Dfile.encoding=UTF-8</argLine>--> <!-- TODO finalize -->
+                    <argLine>-Xmx1024m -XX:MaxPermSize=256m -Dfile.encoding=UTF-8</argLine>
                     <suiteXmlFiles>
                         <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
