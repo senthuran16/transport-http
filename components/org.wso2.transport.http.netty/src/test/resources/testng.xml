@@ -146,29 +146,29 @@
             <class name="org.wso2.transport.http.netty.http2.trailer.H2ListenerTrailersInInitialHeaderFrameTestCase"/>
         </classes>
     </test>
-<!--    <test name="Transport Security Tests" parallel="false">-->
-<!--        <classes>-->
-<!--            <class name="org.wso2.transport.http.netty.certificatevalidation.RevocationVerificationTest"/>-->
-<!--            <class name="org.wso2.transport.http.netty.certificatevalidation.CRLVerifierTest"/>-->
-<!--            <class name="org.wso2.transport.http.netty.certificatevalidation.OCSPVerifierTest"/>-->
-<!--            <class name="org.wso2.transport.http.netty.https.HttpsInvalidServerCertificateTest"/>-->
-<!--            <class name="org.wso2.transport.http.netty.https.SSLProtocolsTest"/>-->
-<!--            <class name="org.wso2.transport.http.netty.https.MutualSSLTestCase"/>-->
-<!--            <class name="org.wso2.transport.http.netty.https.CipherSuitesTest"/>-->
-<!--            <class name="org.wso2.transport.http.netty.hostnameverfication.HostnameVerificationTest"/>-->
-<!--            <class name="org.wso2.transport.http.netty.pkcs.PKCSTest"/>-->
-<!--            <class name="org.wso2.transport.http.netty.certificatevalidation.OCSPStaplingTest"/>-->
-<!--            <class name="org.wso2.transport.http.netty.certificatevalidation.OCSPValidationTest"/>-->
-<!--            <class name="org.wso2.transport.http.netty.certificatevalidation.ListCertificateListFromCertChain"/>-->
-<!--            <class name="org.wso2.transport.http.netty.https.MutualSSLwithCertsTest"/>-->
-<!--            <class name="org.wso2.transport.http.netty.https.CipherSuiteswithCertsTest"/>-->
-<!--            <class name="org.wso2.transport.http.netty.https.OptionalMutualSSLTest"/>-->
-<!--            <class name="org.wso2.transport.http.netty.https.SSLProtocolsWithCertsTest"/>-->
-<!--            <class name="org.wso2.transport.http.netty.http2.ssl.Http2ALPNwithCertsTest"/>-->
-<!--            <class name="org.wso2.transport.http.netty.http2.ssl.TestHttp2WithALPN"/>-->
-<!--            <class name="org.wso2.transport.http.netty.http2.ssl.Http2MutualSslTest"/>-->
-<!--            <class name="org.wso2.transport.http.netty.disablessl.SslDisabledClientTest"/>-->
-<!--            <class name="org.wso2.transport.http.netty.https.ServerCloseConnectionDuringSslTest"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="Transport Security Tests" parallel="false">
+        <classes>
+            <class name="org.wso2.transport.http.netty.certificatevalidation.RevocationVerificationTest"/>
+            <class name="org.wso2.transport.http.netty.certificatevalidation.CRLVerifierTest"/>
+            <class name="org.wso2.transport.http.netty.certificatevalidation.OCSPVerifierTest"/>
+            <class name="org.wso2.transport.http.netty.https.HttpsInvalidServerCertificateTest"/>
+            <class name="org.wso2.transport.http.netty.https.SSLProtocolsTest"/>
+            <class name="org.wso2.transport.http.netty.https.MutualSSLTestCase"/>
+            <class name="org.wso2.transport.http.netty.https.CipherSuitesTest"/>
+            <class name="org.wso2.transport.http.netty.hostnameverfication.HostnameVerificationTest"/>
+            <class name="org.wso2.transport.http.netty.pkcs.PKCSTest"/>
+            <class name="org.wso2.transport.http.netty.certificatevalidation.OCSPStaplingTest"/>
+            <class name="org.wso2.transport.http.netty.certificatevalidation.OCSPValidationTest"/>
+            <class name="org.wso2.transport.http.netty.certificatevalidation.ListCertificateListFromCertChain"/>
+            <class name="org.wso2.transport.http.netty.https.MutualSSLwithCertsTest"/>
+            <class name="org.wso2.transport.http.netty.https.CipherSuiteswithCertsTest"/>
+            <class name="org.wso2.transport.http.netty.https.OptionalMutualSSLTest"/>
+            <class name="org.wso2.transport.http.netty.https.SSLProtocolsWithCertsTest"/>
+            <class name="org.wso2.transport.http.netty.http2.ssl.Http2ALPNwithCertsTest"/>
+            <class name="org.wso2.transport.http.netty.http2.ssl.TestHttp2WithALPN"/>
+            <class name="org.wso2.transport.http.netty.http2.ssl.Http2MutualSslTest"/>
+            <class name="org.wso2.transport.http.netty.disablessl.SslDisabledClientTest"/>
+            <class name="org.wso2.transport.http.netty.https.ServerCloseConnectionDuringSslTest"/>
+        </classes>
+    </test>
 </suite>
