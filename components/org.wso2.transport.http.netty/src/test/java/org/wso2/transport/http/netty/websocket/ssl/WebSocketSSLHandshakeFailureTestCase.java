@@ -75,6 +75,7 @@ public class WebSocketSSLHandshakeFailureTestCase {
         String keyStoreFile = "/simple-test-config/wso2carbon.p12";
         listenerConfiguration.setKeyStoreFile(TestUtil.getAbsolutePath(keyStoreFile));
         listenerConfiguration.setScheme("https");
+        listenerConfiguration.setTLSStoreType("");
         listenerConfiguration.setKeyStorePass(password);
         listenerConfiguration.setTLSStoreType(tlsStoreType);
         return listenerConfiguration;

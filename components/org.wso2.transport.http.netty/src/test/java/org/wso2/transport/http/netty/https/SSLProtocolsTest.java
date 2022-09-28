@@ -70,7 +70,7 @@ public class SSLProtocolsTest {
 
         // true = expecting a SSL hand shake failure.
         // false = expecting no errors.
-        return new Object[][] { { "TLSv1.1", "TLSv1.1", false, TestUtil.SERVER_PORT1 },
+        return new Object[][] { { "TLSv1.2", "TLSv1.2", false, TestUtil.SERVER_PORT1 },
                 { "TLSv1.1", "TLSv1.2", true, TestUtil.SERVER_PORT2 } };
     }
 
@@ -147,18 +147,22 @@ public class SSLProtocolsTest {
 
             HttpCarbonMessage response = listener.getHttpResponseMessage();
             if (hasException) {
+                System.out.println(">>>>>>>>> hasException");
                 assertNotNull(listener.getThrowables());
                 boolean hasSSLException = false;
                 for (Throwable throwable : listener.getThrowables()) {
+                    System.out.println(">>>>>>>> Throwable: " + throwable.getMessage());
                     if (throwable.getMessage() != null && (
                             throwable.getMessage().contains("javax.net.ssl.SSLHandshakeException") || throwable
-                                    .getMessage().contains("handshake_failure"))) {
+                                    .getMessage().contains("handshake_failure") ||
+                                    throwable.getMessage().contains("SSL connection failed"))) {
                         hasSSLException = true;
                         break;
                     }
                 }
                 assertTrue(hasSSLException);
             } else {
+                System.out.println(">>>>>>>>> NOT hasException");
                 assertNotNull(response);
                 String result = new BufferedReader(
                         new InputStreamReader(new HttpMessageDataStreamer(response).getInputStream())).lines()

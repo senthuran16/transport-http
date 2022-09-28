@@ -68,7 +68,7 @@ public class SSLProtocolsWithCertsTest {
     public static Object[][] cipherSuites() {
         // true = expecting a SSL hand shake failure.
         // false = expecting no errors.
-        return new Object[][] { { "TLSv1.1", "TLSv1.1", false, TestUtil.SERVER_PORT1 },
+        return new Object[][] { { "TLSv1.2", "TLSv1.2", false, TestUtil.SERVER_PORT1 },
                 { "TLSv1.1", "TLSv1.2", true, TestUtil.SERVER_PORT2 } };
     }
 
@@ -148,7 +148,8 @@ public class SSLProtocolsWithCertsTest {
                 for (Throwable throwable : listener.getThrowables()) {
                     if (throwable.getMessage() != null && (
                             throwable.getMessage().contains("javax.net.ssl.SSLHandshakeException") || throwable
-                                    .getMessage().contains("handshake_failure"))) {
+                                    .getMessage().contains("handshake_failure") ||
+                                    throwable.getMessage().contains("SSL connection failed"))) {
                         hasSSLException = true;
                         break;
                     }
